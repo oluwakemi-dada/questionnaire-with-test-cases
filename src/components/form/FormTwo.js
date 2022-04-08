@@ -20,7 +20,7 @@ const FormTwo = ({
 }) => {
   // HANDLERS
   const proceed = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (selectedOption === '') {
       setAlertFn('Age is required');
     } else {
@@ -29,7 +29,7 @@ const FormTwo = ({
   };
 
   const previous = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     prevStep();
   };
 

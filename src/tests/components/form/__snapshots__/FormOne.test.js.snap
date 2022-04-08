@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FormOne correctly with default data 1`] = `
+<styled.div>
+  <styled.h1
+    className="text-center "
+  >
+    Question
+  </styled.h1>
+  <styled.div>
+    <label
+      htmlFor="name"
+    >
+      What is your name?
+    </label>
+    <input
+      name="name"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </styled.div>
+  <styled.div>
+    <styled.button
+      onClick={[Function]}
+    >
+      Next
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`should show error message when alert is present 1`] = `
+<styled.div>
+  <styled.h1
+    className="text-center "
+  >
+    Question
+  </styled.h1>
+  <Alert
+    msg="Name is required"
+  />
+  <styled.div>
+    <label
+      htmlFor="name"
+    >
+      What is your name?
+    </label>
+    <input
+      name="name"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </styled.div>
+  <styled.div>
+    <styled.button
+      onClick={[Function]}
+    >
+      Next
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;

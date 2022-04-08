@@ -55,12 +55,12 @@ const Confirm = ({ prevStep, formData}) => {
 
   // HANDLERS
   const proceed = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     history.push('/success');
   };
 
   const previous = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     prevStep();
   };
 

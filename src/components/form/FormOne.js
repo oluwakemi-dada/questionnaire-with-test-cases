@@ -14,8 +14,7 @@ const FormOne = ({ nextStep, onChange, formData, alert, setAlertFn }) => {
   const { name } = formData;
 
   // HANDLERS
-  const proceed = (e) => {
-    e.preventDefault();
+  const proceed = () => {
     if (name === '') {
       setAlertFn('Name is required');
     } else {
@@ -39,7 +38,7 @@ const FormOne = ({ nextStep, onChange, formData, alert, setAlertFn }) => {
       </FormControl>
 
       <BtnWrapper>
-        <BtnNext onClick={(e) => proceed(e)}>Next</BtnNext>
+        <BtnNext onClick={proceed}>Next</BtnNext>
       </BtnWrapper>
     </Wrapper>
   );

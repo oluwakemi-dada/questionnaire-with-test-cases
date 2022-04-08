@@ -21,7 +21,7 @@ const FormThree = ({
 
   // HANDLERS
   const proceed = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (sex === '') {
       setAlertFn('Sex is required');
     } else {
@@ -30,7 +30,7 @@ const FormThree = ({
   };
 
   const previous = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     prevStep();
   };
   return (
