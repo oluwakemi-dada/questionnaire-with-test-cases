@@ -19,8 +19,7 @@ const FormTwo = ({
   setSelectedOption,
 }) => {
   // HANDLERS
-  const proceed = (e) => {
-    // e.preventDefault();
+  const proceed = () => {
     if (selectedOption === '') {
       setAlertFn('Age is required');
     } else {
@@ -28,8 +27,7 @@ const FormTwo = ({
     }
   };
 
-  const previous = (e) => {
-    // e.preventDefault();
+  const previous = () => {
     prevStep();
   };
 
@@ -85,8 +83,8 @@ const FormTwo = ({
       </FormControl>
 
       <BtnWrapper>
-        <BtnPrev onClick={(e) => previous(e)}>Back</BtnPrev>
-        <BtnNext onClick={(e) => proceed(e)}>Next</BtnNext>
+        <BtnPrev onClick={previous}>Back</BtnPrev>
+        <BtnNext onClick={proceed}>Next</BtnNext>
       </BtnWrapper>
     </Wrapper>
   );

@@ -26,8 +26,6 @@ test('should render FormOne correctly with default data', () => {
 });
 
 test('should call setAlertFn when next button is called without filling an input for name', () => {
-  const value = '';
-  wrapper.find('input').simulate('change', { target: { value } });
   wrapper.find(BtnNext).simulate('click');
 
   expect(setAlertFn).toHaveBeenLastCalledWith('Name is required');
@@ -41,7 +39,18 @@ test('should show error message when alert is present', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('should call nextStep when next button is called with name input', () => {
+test('should call onChange function when an input value is changed', () => {
+  const value = 'Teresa Mendoza';
+  const e = {
+    target: {
+      value,
+    },
+  };
+  wrapper.find('input').simulate('change', e);
+  expect(onChange).toHaveBeenLastCalledWith(e);
+});
+
+test('should call nextStep when next button is clicked with name input', () => {
   wrapper.setProps({
     formData: {
       name: 'Oluwakemi Dada',
@@ -50,6 +59,6 @@ test('should call nextStep when next button is called with name input', () => {
     },
   });
   wrapper.find(BtnNext).simulate('click');
-  
+
   expect(nextStep).toHaveBeenCalled();
 });

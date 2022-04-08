@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FormOne correctly with default data 1`] = `
+<styled.div>
+  <styled.h1
+    className="text-center "
+  >
+    Question
+  </styled.h1>
+  <styled.div>
+    <label>
+      What is your age bracket?
+    </label>
+    <styled.div>
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value="Below 18"
+      />
+      <label
+        htmlFor="age"
+      >
+        Below 18
+      </label>
+    </styled.div>
+    <styled.div>
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value="18 - 22"
+      />
+      <label
+        htmlFor="age"
+      >
+        18 - 22
+      </label>
+    </styled.div>
+    <styled.div>
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value="23 - 30"
+      />
+      <label
+        htmlFor="age"
+      >
+        23 - 30
+      </label>
+    </styled.div>
+    <styled.div>
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value="Above 30"
+      />
+      <label
+        htmlFor="age"
+      >
+        Above 30
+      </label>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.button
+      onClick={[Function]}
+    >
+      Back
+    </styled.button>
+    <styled.button
+      onClick={[Function]}
+    >
+      Next
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`should show error message when alert is present 1`] = `
+<styled.div>
+  <styled.h1
+    className="text-center "
+  >
+    Question
+  </styled.h1>
+  <Alert
+    msg="Age is required"
+  />
+  <styled.div>
+    <label>
+      What is your age bracket?
+    </label>
+    <styled.div>
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value="Below 18"
+      />
+      <label
+        htmlFor="age"
+      >
+        Below 18
+      </label>
+    </styled.div>
+    <styled.div>
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value="18 - 22"
+      />
+      <label
+        htmlFor="age"
+      >
+        18 - 22
+      </label>
+    </styled.div>
+    <styled.div>
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value="23 - 30"
+      />
+      <label
+        htmlFor="age"
+      >
+        23 - 30
+      </label>
+    </styled.div>
+    <styled.div>
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value="Above 30"
+      />
+      <label
+        htmlFor="age"
+      >
+        Above 30
+      </label>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.button
+      onClick={[Function]}
+    >
+      Back
+    </styled.button>
+    <styled.button
+      onClick={[Function]}
+    >
+      Next
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;
