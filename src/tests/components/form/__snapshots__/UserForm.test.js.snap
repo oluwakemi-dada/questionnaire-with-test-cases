@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Confirm when step = 4 1`] = `
+<Confirm
+  formData={
+    Object {
+      "age": "",
+      "name": "",
+      "sex": "",
+    }
+  }
+  nextStep={[Function]}
+  prevStep={[Function]}
+/>
+`;
+
+exports[`should render FormOne when step = 1 (default) 1`] = `
+<FormOne
+  alert=""
+  formData={
+    Object {
+      "age": "",
+      "name": "",
+      "sex": "",
+    }
+  }
+  nextStep={[Function]}
+  onChange={[Function]}
+  setAlertFn={[Function]}
+/>
+`;
+
+exports[`should render FormOne when step = 2 and prevStep is called 1`] = `
+<FormOne
+  alert=""
+  formData={
+    Object {
+      "age": "",
+      "name": "",
+      "sex": "",
+    }
+  }
+  nextStep={[Function]}
+  onChange={[Function]}
+  setAlertFn={[Function]}
+/>
+`;
+
+exports[`should render FormThree when step = 3 1`] = `
+<FormThree
+  alert=""
+  formData={
+    Object {
+      "age": "",
+      "name": "",
+      "sex": "",
+    }
+  }
+  nextStep={[Function]}
+  onChange={[Function]}
+  prevStep={[Function]}
+  setAlertFn={[Function]}
+/>
+`;
+
+exports[`should render FormThree when step = 4 and prevStep is called 1`] = `
+<FormThree
+  alert=""
+  formData={
+    Object {
+      "age": "",
+      "name": "",
+      "sex": "",
+    }
+  }
+  nextStep={[Function]}
+  onChange={[Function]}
+  prevStep={[Function]}
+  setAlertFn={[Function]}
+/>
+`;
+
+exports[`should render FormTwo when step = 2 1`] = `
+<FormTwo
+  alert=""
+  nextStep={[Function]}
+  prevStep={[Function]}
+  selectedOption=""
+  setAlertFn={[Function]}
+  setSelectedOption={[Function]}
+/>
+`;
+
+exports[`should render FormTwo when step = 3 and prevStep is called 1`] = `
+<FormTwo
+  alert=""
+  nextStep={[Function]}
+  prevStep={[Function]}
+  selectedOption=""
+  setAlertFn={[Function]}
+  setSelectedOption={[Function]}
+/>
+`;

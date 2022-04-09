@@ -47,20 +47,18 @@ const Answer = styled.div`
   color: ${(props) => (props.theme === 'light' ? '#1c1c1c' : '#e8e5e5')};
 `;
 
-const Confirm = ({ prevStep, formData}) => {
+const Confirm = ({ prevStep, formData }) => {
   const history = useHistory();
   const currTheme = localStorage.getItem('theme');
 
   const { name, age, sex } = formData;
 
   // HANDLERS
-  const proceed = (e) => {
-    // e.preventDefault();
+  const proceed = () => {
     history.push('/success');
   };
 
-  const previous = (e) => {
-    // e.preventDefault();
+  const previous = () => {
     prevStep();
   };
 
@@ -82,8 +80,8 @@ const Confirm = ({ prevStep, formData}) => {
         </Items>
       </Details>
       <BtnWrapper>
-        <BtnPrev onClick={(e) => previous(e)}>Back</BtnPrev>
-        <BtnNext onClick={(e) => proceed(e)}>Submit</BtnNext>
+        <BtnPrev onClick={previous}>Back</BtnPrev>
+        <BtnNext onClick={proceed}>Submit</BtnNext>
       </BtnWrapper>
     </DetailsWrapper>
   );
