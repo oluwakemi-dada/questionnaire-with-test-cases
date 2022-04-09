@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render NotFoundScreen correctly 1`] = `
+<styled.div>
+  <styled.div>
+    <h2>
+      Sorry, this page does not exist 😥
+    </h2>
+    <Link
+      to="/"
+    >
+      <p>
+        Return home 🚀
+      </p>
+    </Link>
+  </styled.div>
+</styled.div>
+`;

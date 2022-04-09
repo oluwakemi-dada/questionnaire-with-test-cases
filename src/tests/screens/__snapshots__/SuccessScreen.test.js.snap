@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SuccessScreen correctly 1`] = `
+<styled.div>
+  <styled.div>
+    <p>
+      Your submission was successful 😋
+    </p>
+    <styled.div>
+      <img
+        alt=""
+        src="success.svg"
+      />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
