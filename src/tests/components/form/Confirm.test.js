@@ -13,7 +13,7 @@ jest.mock('react-router-dom', () => ({
   }),
 }));
 
-const { getItemMock, setItemMock } = mockLocalStorage();
+const { getItemMock } = mockLocalStorage();
 let prevStep, wrapper;
 beforeEach(() => {
   prevStep = jest.fn();

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Navbar correctly with dark theme 1`] = `
+<styled.nav>
+  <h1>
+    <Link
+      to="/"
+    >
+      QA
+    </Link>
+  </h1>
+  <styled.div
+    onClick={[Function]}
+    theme="dark"
+  >
+    <BsMoonStarsFill />
+  </styled.div>
+</styled.nav>
+`;
+
+exports[`should render Navbar correctly with light theme 1`] = `
+<styled.nav>
+  <h1>
+    <Link
+      to="/"
+    >
+      QA
+    </Link>
+  </h1>
+  <styled.div
+    onClick={[Function]}
+    theme="light"
+  >
+    <BsSunFill />
+  </styled.div>
+</styled.nav>
+`;

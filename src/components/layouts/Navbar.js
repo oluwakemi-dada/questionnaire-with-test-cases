@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { BsMoonStarsFill } from 'react-icons/bs';
 import { BsSunFill } from 'react-icons/bs';
 
-const Wrapper = styled.div`
+const Wrapper = styled.nav`
   height: 8rem;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const ThemeToggle = styled.div`
+export const ThemeToggle = styled.div`
   cursor: pointer;
   color: ${(props) => (props.theme === 'light' ? '#000' : '#fff')};
 `;

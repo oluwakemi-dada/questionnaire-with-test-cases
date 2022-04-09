@@ -9,7 +9,6 @@ let nextStep,
   setAlertFn,
   selectedOption,
   setSelectedOption,
-  onChangeHandler,
   wrapper;
 
 beforeEach(() => {
@@ -19,7 +18,6 @@ beforeEach(() => {
   prevStep = jest.fn();
   nextStep = jest.fn();
   setAlertFn = jest.fn();
-  onChangeHandler = jest.fn();
   wrapper = shallow(
     <FormTwo
       prevStep={prevStep}
