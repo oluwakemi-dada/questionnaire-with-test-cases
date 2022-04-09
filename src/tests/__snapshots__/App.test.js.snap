@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render App correctly 1`] = `
+<Component
+  theme={
+    Object {
+      "body": "#fff",
+      "fontColor": "#000",
+    }
+  }
+>
+  <Memo(l) />
+  <styled.div>
+    <BrowserRouter>
+      <Navbar
+        theme="light"
+        themeToggler={[Function]}
+      />
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          path="/success"
+        />
+        <Route
+          component={[Function]}
+        />
+      </Switch>
+    </BrowserRouter>
+  </styled.div>
+</Component>
+`;
