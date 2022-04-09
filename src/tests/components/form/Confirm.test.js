@@ -4,12 +4,12 @@ import Confirm from '../../../components/form/Confirm';
 import { BtnPrev, BtnNext } from '../../../components/form/FormResources';
 import { confirmFormData } from '../../fixtures/formData';
 import { mockLocalStorage } from '../../utils/mockLocalStorage';
-import { useHistory } from 'react-router-dom';
+
+const mockHistoryPush = jest.fn();
 
 jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
   useHistory: () => ({
-    push: jest.fn(),
+    push: mockHistoryPush,
   }),
 }));
 
@@ -35,6 +35,7 @@ test('should call prevStep when previous button is clicked', () => {
   expect(prevStep).toHaveBeenCalled();
 });
 
-// test('should call history.push when submit button is clicked', () => {
-//   wrapper.find(BtnNext).simulate('click');
-// });
+test('should call history.push when submit button is clicked', () => {
+  wrapper.find(BtnNext).simulate('click');
+  expect(mockHistoryPush).toHaveBeenCalledWith('/success');
+});
