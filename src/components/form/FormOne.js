@@ -21,6 +21,7 @@ const FormOne = ({ nextStep, onChange, formData, alert, setAlertFn }) => {
       nextStep();
     }
   };
+  
   return (
     <Wrapper>
       <PrimaryHeading className='text-center '>Question</PrimaryHeading>

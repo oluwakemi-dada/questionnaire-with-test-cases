@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FormThree correctly with default data 1`] = `
+<styled.div>
+  <styled.h1
+    className="text-center "
+  >
+    Question
+  </styled.h1>
+  <styled.div>
+    <label
+      htmlFor="sex"
+    >
+      What is your sex?
+    </label>
+    <select
+      name="sex"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select ...
+      </option>
+      <option
+        value="Male"
+      >
+        Male
+      </option>
+      <option
+        value="Female"
+      >
+        Female
+      </option>
+      <option
+        value="Decline to self-identity"
+      >
+        Decline to self-identity
+      </option>
+    </select>
+  </styled.div>
+  <styled.div>
+    <styled.button
+      onClick={[Function]}
+    >
+      Back
+    </styled.button>
+    <styled.button
+      onClick={[Function]}
+    >
+      Next
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`should show error message when alert is present 1`] = `
+<styled.div>
+  <styled.h1
+    className="text-center "
+  >
+    Question
+  </styled.h1>
+  <Alert
+    msg="Sex is required"
+  />
+  <styled.div>
+    <label
+      htmlFor="sex"
+    >
+      What is your sex?
+    </label>
+    <select
+      name="sex"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select ...
+      </option>
+      <option
+        value="Male"
+      >
+        Male
+      </option>
+      <option
+        value="Female"
+      >
+        Female
+      </option>
+      <option
+        value="Decline to self-identity"
+      >
+        Decline to self-identity
+      </option>
+    </select>
+  </styled.div>
+  <styled.div>
+    <styled.button
+      onClick={[Function]}
+    >
+      Back
+    </styled.button>
+    <styled.button
+      onClick={[Function]}
+    >
+      Next
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;

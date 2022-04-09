@@ -20,8 +20,7 @@ const FormThree = ({
   const { sex } = formData;
 
   // HANDLERS
-  const proceed = (e) => {
-    // e.preventDefault();
+  const proceed = () => {
     if (sex === '') {
       setAlertFn('Sex is required');
     } else {
@@ -29,10 +28,10 @@ const FormThree = ({
     }
   };
 
-  const previous = (e) => {
-    // e.preventDefault();
+  const previous = () => {
     prevStep();
   };
+  
   return (
     <Wrapper>
       <PrimaryHeading className='text-center '>Question</PrimaryHeading>
@@ -52,8 +51,8 @@ const FormThree = ({
       </FormControl>
 
       <BtnWrapper>
-        <BtnPrev onClick={(e) => previous(e)}>Back</BtnPrev>
-        <BtnNext onClick={(e) => proceed(e)}>Next</BtnNext>
+        <BtnPrev onClick={previous}>Back</BtnPrev>
+        <BtnNext onClick={proceed}>Next</BtnNext>
       </BtnWrapper>
     </Wrapper>
   );
