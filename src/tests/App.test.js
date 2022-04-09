@@ -24,7 +24,10 @@ test('should set theme to light in localstorage if no theme', () => {
 test('should update theme when themeToggler is called (light to dark)', () => {
   getItemMock.mockReturnValue('light');
   wrapper = shallow(<App />);
+  // Before update
   expect(wrapper.find(Navbar).prop('theme')).toBe('light');
+  // Update
   wrapper.find(Navbar).prop('themeToggler')();
+  // After update
   expect(wrapper.find(Navbar).prop('theme')).toBe('dark');
 });

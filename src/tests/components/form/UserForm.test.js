@@ -75,8 +75,9 @@ test('should update formData when onChange is called on FormOne', () => {
       value,
     },
   };
+  // Update
   wrapper.find(FormOne).prop('onChange')(e);
-
+  // After update
   expect(wrapper.find(FormOne).prop('formData')).toEqual({
     ...formData,
     name: value,
@@ -86,8 +87,11 @@ test('should update formData when onChange is called on FormOne', () => {
 test('should update selectedOption when setSelectedOption is called on FormTwo', () => {
   const value = '23 - 30';
   wrapper.find(FormOne).prop('nextStep')();
+  // Before update
+  expect(wrapper.find(FormTwo).prop('selectedOption')).toBe('');
+  // Update
   wrapper.find(FormTwo).prop('setSelectedOption')(value);
-
+  // After update
   expect(wrapper.find(FormTwo).prop('selectedOption')).toBe(value);
 });
 
@@ -101,8 +105,13 @@ test('should update formData when onChange is called on FormThree', () => {
   };
   wrapper.find(FormOne).prop('nextStep')();
   wrapper.find(FormTwo).prop('nextStep')();
+  // Before update
+  expect(wrapper.find(FormThree).prop('formData')).toEqual({
+    ...formData,
+  });
+  // Update
   wrapper.find(FormThree).prop('onChange')(e);
-
+  // After update
   expect(wrapper.find(FormThree).prop('formData')).toEqual({
     ...formData,
     sex: value,
@@ -111,7 +120,10 @@ test('should update formData when onChange is called on FormThree', () => {
 
 test('should update alert when setAlertFn is called', () => {
   const msg = 'Name is required';
+  // Before update
+  expect(wrapper.find(FormOne).prop('alert')).toBe('');
+  // Update
   wrapper.find(FormOne).prop('setAlertFn')(msg);
-
+  // After update
   expect(wrapper.find(FormOne).prop('alert')).toBe(msg);
 });
