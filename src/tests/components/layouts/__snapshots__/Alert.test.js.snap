@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Alert correctly with msg data 1`] = `
+<styled.div>
+  <styled.div>
+    Name is required
+  </styled.div>
+</styled.div>
+`;
