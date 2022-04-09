@@ -1,6 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render Confirm correctly with  confirmFormData and localStorage data 1`] = `
+exports[`should render Confirm correctly with confirmFormData and localStorage data (dark theme) 1`] = `
+<styled.div>
+  <styled.h1
+    className="text-center "
+  >
+    Confirm
+  </styled.h1>
+  <styled.div>
+    <styled.div
+      theme="dark"
+    >
+      <styled.div
+        theme="dark"
+      >
+        What is your name?
+      </styled.div>
+      <styled.div
+        theme="dark"
+      >
+        Oluwakemi Dada
+      </styled.div>
+    </styled.div>
+    <styled.div
+      theme="dark"
+    >
+      <styled.div
+        theme="dark"
+      >
+        What is your age bracket?
+      </styled.div>
+      <styled.div
+        theme="dark"
+      >
+        24
+      </styled.div>
+    </styled.div>
+    <styled.div
+      theme="dark"
+    >
+      <styled.div
+        theme="dark"
+      >
+        What is your sex?
+      </styled.div>
+      <styled.div
+        theme="dark"
+      >
+        Female
+      </styled.div>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.button
+      onClick={[Function]}
+    >
+      Back
+    </styled.button>
+    <styled.button
+      onClick={[Function]}
+    >
+      Submit
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`should render Confirm correctly with confirmFormData and localStorage data (light theme) 1`] = `
 <styled.div>
   <styled.h1
     className="text-center "

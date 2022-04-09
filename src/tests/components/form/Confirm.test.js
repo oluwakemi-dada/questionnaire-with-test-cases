@@ -21,8 +21,16 @@ beforeEach(() => {
   wrapper = shallow(<Confirm prevStep={prevStep} formData={confirmFormData} />);
 });
 
-test('should render Confirm correctly with  confirmFormData and localStorage data', () => {
+test('should render Confirm correctly with confirmFormData and localStorage data (light theme)', () => {
   getItemMock.mockReturnValue('light');
+  wrapper = shallow(<Confirm prevStep={prevStep} formData={confirmFormData} />);
+
+  expect(getItemMock).toHaveBeenLastCalledWith('theme');
+  expect(wrapper).toMatchSnapshot();
+});
+
+test('should render Confirm correctly with confirmFormData and localStorage data (dark theme)', () => {
+  getItemMock.mockReturnValue('dark');
   wrapper = shallow(<Confirm prevStep={prevStep} formData={confirmFormData} />);
 
   expect(getItemMock).toHaveBeenLastCalledWith('theme');
