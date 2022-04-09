@@ -11,8 +11,6 @@ const UserForm = () => {
     sex: '',
   });
 
-  const [selectedOption, setSelectedOption] = useState('');
-
   const [alert, setAlert] = useState('');
 
   const [step, setStep] = useState(1);
@@ -22,7 +20,6 @@ const UserForm = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-      age: selectedOption,
     });
 
   const setAlertFn = (msg) => {
@@ -55,10 +52,10 @@ const UserForm = () => {
       <FormTwo
         prevStep={prevStep}
         nextStep={nextStep}
+        onChange={onChange}
+        formData={formData}
         alert={alert}
         setAlertFn={setAlertFn}
-        selectedOption={selectedOption}
-        setSelectedOption={setSelectedOption}
       />
     );
   } else if (step === 3) {

@@ -15,12 +15,14 @@ const FormTwo = ({
   prevStep,
   alert,
   setAlertFn,
-  selectedOption,
-  setSelectedOption,
+  onChange,
+  formData,
 }) => {
+  const { age } = formData;
+
   // HANDLERS
   const proceed = () => {
-    if (selectedOption === '') {
+    if (age === '') {
       setAlertFn('Age is required');
     } else {
       nextStep();
@@ -29,10 +31,6 @@ const FormTwo = ({
 
   const previous = () => {
     prevStep();
-  };
-
-  const onChangeHandler = (e) => {
-    setSelectedOption(e.target.value);
   };
 
   return (
@@ -46,37 +44,41 @@ const FormTwo = ({
 
         <Option>
           <input
+            name='age'
             type='radio'
             value='Below 18'
-            checked={selectedOption === 'Below 18'}
-            onChange={onChangeHandler}
+            checked={age === 'Below 18'}
+            onChange={onChange}
           />
           <label htmlFor='age'>Below 18</label>
         </Option>
         <Option>
           <input
+            name='age'
             type='radio'
             value='18 - 22'
-            checked={selectedOption === '18 - 22'}
-            onChange={onChangeHandler}
+            checked={age === '18 - 22'}
+            onChange={onChange}
           />
           <label htmlFor='age'>18 - 22</label>
         </Option>
         <Option>
           <input
+            name='age'
             type='radio'
             value='23 - 30'
-            checked={selectedOption === '23 - 30'}
-            onChange={onChangeHandler}
+            checked={age === '23 - 30'}
+            onChange={onChange}
           />
           <label htmlFor='age'>23 - 30</label>
         </Option>
         <Option>
           <input
+            name='age'
             type='radio'
             value='Above 30'
-            checked={selectedOption === 'Above 30'}
-            onChange={onChangeHandler}
+            checked={age === 'Above 30'}
+            onChange={onChange}
           />
           <label htmlFor='age'>Above 30</label>
         </Option>

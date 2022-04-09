@@ -14,7 +14,8 @@ exports[`should render FormOne correctly with default data 1`] = `
     <styled.div>
       <input
         checked={false}
-        onChange={[Function]}
+        name="age"
+        onChange={[MockFunction]}
         type="radio"
         value="Below 18"
       />
@@ -27,7 +28,8 @@ exports[`should render FormOne correctly with default data 1`] = `
     <styled.div>
       <input
         checked={false}
-        onChange={[Function]}
+        name="age"
+        onChange={[MockFunction]}
         type="radio"
         value="18 - 22"
       />
@@ -40,7 +42,8 @@ exports[`should render FormOne correctly with default data 1`] = `
     <styled.div>
       <input
         checked={false}
-        onChange={[Function]}
+        name="age"
+        onChange={[MockFunction]}
         type="radio"
         value="23 - 30"
       />
@@ -53,7 +56,8 @@ exports[`should render FormOne correctly with default data 1`] = `
     <styled.div>
       <input
         checked={false}
-        onChange={[Function]}
+        name="age"
+        onChange={[MockFunction]}
         type="radio"
         value="Above 30"
       />
@@ -96,7 +100,8 @@ exports[`should show error message when alert is present 1`] = `
     <styled.div>
       <input
         checked={false}
-        onChange={[Function]}
+        name="age"
+        onChange={[MockFunction]}
         type="radio"
         value="Below 18"
       />
@@ -109,7 +114,8 @@ exports[`should show error message when alert is present 1`] = `
     <styled.div>
       <input
         checked={false}
-        onChange={[Function]}
+        name="age"
+        onChange={[MockFunction]}
         type="radio"
         value="18 - 22"
       />
@@ -122,7 +128,8 @@ exports[`should show error message when alert is present 1`] = `
     <styled.div>
       <input
         checked={false}
-        onChange={[Function]}
+        name="age"
+        onChange={[MockFunction]}
         type="radio"
         value="23 - 30"
       />
@@ -135,7 +142,8 @@ exports[`should show error message when alert is present 1`] = `
     <styled.div>
       <input
         checked={false}
-        onChange={[Function]}
+        name="age"
+        onChange={[MockFunction]}
         type="radio"
         value="Above 30"
       />

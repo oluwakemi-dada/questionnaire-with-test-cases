@@ -2,19 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import FormTwo from '../../../components/form/FormTwo';
 import { BtnPrev, BtnNext } from '../../../components/form/FormResources';
+import { formData } from '../../fixtures/formData';
 
-let nextStep,
-  prevStep,
-  alert,
-  setAlertFn,
-  selectedOption,
-  setSelectedOption,
-  wrapper;
+let nextStep, prevStep, alert, setAlertFn, onChange, wrapper;
 
 beforeEach(() => {
   alert = '';
-  selectedOption = '';
-  setSelectedOption = jest.fn();
+  onChange = jest.fn();
   prevStep = jest.fn();
   nextStep = jest.fn();
   setAlertFn = jest.fn();
@@ -22,8 +16,8 @@ beforeEach(() => {
     <FormTwo
       prevStep={prevStep}
       nextStep={nextStep}
-      selectedOption={selectedOption}
-      setSelectedOption={setSelectedOption}
+      onChange={onChange}
+      formData={formData}
       alert={alert}
       setAlertFn={setAlertFn}
     />
@@ -48,34 +42,48 @@ test('should show error message when alert is present', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('should call setSelectedOption when an input value is changed', () => {
-  // Input change 1
-  wrapper
-    .find('input')
-    .at(0)
-    .simulate('change', { target: { value: 'Below 18' } });
-  expect(setSelectedOption).toHaveBeenLastCalledWith('Below 18');
+test('should call onChange function when first option is selected', () => {
+  const value = 'Below 18';
+  const e = {
+    target: {
+      value,
+    },
+  };
+  wrapper.find('input').at(0).simulate('change', e);
+  expect(onChange).toHaveBeenLastCalledWith(e);
+});
 
-  // Input change 2
-  wrapper
-    .find('input')
-    .at(1)
-    .simulate('change', { target: { value: '18 - 22' } });
-  expect(setSelectedOption).toHaveBeenLastCalledWith('18 - 22');
+test('should call onChange function when second option is selected', () => {
+  const value = '18 - 22';
+  const e = {
+    target: {
+      value,
+    },
+  };
+  wrapper.find('input').at(0).simulate('change', e);
+  expect(onChange).toHaveBeenLastCalledWith(e);
+});
 
-  // Input change 3
-  wrapper
-    .find('input')
-    .at(2)
-    .simulate('change', { target: { value: '23 - 30' } });
-  expect(setSelectedOption).toHaveBeenLastCalledWith('23 - 30');
+test('should call onChange function when third option is selected', () => {
+  const value = '23 - 30';
+  const e = {
+    target: {
+      value,
+    },
+  };
+  wrapper.find('input').at(0).simulate('change', e);
+  expect(onChange).toHaveBeenLastCalledWith(e);
+});
 
-  // Input change 4
-  wrapper
-    .find('input')
-    .at(2)
-    .simulate('change', { target: { value: 'Above 30' } });
-  expect(setSelectedOption).toHaveBeenLastCalledWith('Above 30');
+test('should call onChange function when fourth option is selected', () => {
+  const value = 'Above 30';
+  const e = {
+    target: {
+      value,
+    },
+  };
+  wrapper.find('input').at(0).simulate('change', e);
+  expect(onChange).toHaveBeenLastCalledWith(e);
 });
 
 test('should call prevStep when previous button is clicked', () => {
@@ -86,7 +94,11 @@ test('should call prevStep when previous button is clicked', () => {
 
 test('should call nextStep when next button is clicked with age input', () => {
   wrapper.setProps({
-    selectedOption: '23 - 30',
+    formData: {
+      name: '',
+      age: '23 - 30',
+      sex: '',
+    },
   });
   wrapper.find(BtnNext).simulate('click');
 

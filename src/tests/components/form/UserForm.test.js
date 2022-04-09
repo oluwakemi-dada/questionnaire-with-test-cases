@@ -84,15 +84,26 @@ test('should update formData when onChange is called on FormOne', () => {
   });
 });
 
-test('should update selectedOption when setSelectedOption is called on FormTwo', () => {
+test('should update formData when onChange is called on FormTwo', () => {
   const value = '23 - 30';
+  const e = {
+    target: {
+      name: 'age',
+      value,
+    },
+  };
   wrapper.find(FormOne).prop('nextStep')();
   // Before update
-  expect(wrapper.find(FormTwo).prop('selectedOption')).toBe('');
+  expect(wrapper.find(FormTwo).prop('formData')).toEqual({
+    ...formData,
+  });
   // Update
-  wrapper.find(FormTwo).prop('setSelectedOption')(value);
+  wrapper.find(FormTwo).prop('onChange')(e);
   // After update
-  expect(wrapper.find(FormTwo).prop('selectedOption')).toBe(value);
+  expect(wrapper.find(FormTwo).prop('formData')).toEqual({
+    ...formData,
+    age: value,
+  });
 });
 
 test('should update formData when onChange is called on FormThree', () => {

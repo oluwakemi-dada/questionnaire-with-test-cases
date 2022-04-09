@@ -83,21 +83,33 @@ exports[`should render FormThree when step = 4 and prevStep is called 1`] = `
 exports[`should render FormTwo when step = 2 1`] = `
 <FormTwo
   alert=""
+  formData={
+    Object {
+      "age": "",
+      "name": "",
+      "sex": "",
+    }
+  }
   nextStep={[Function]}
+  onChange={[Function]}
   prevStep={[Function]}
-  selectedOption=""
   setAlertFn={[Function]}
-  setSelectedOption={[Function]}
 />
 `;
 
 exports[`should render FormTwo when step = 3 and prevStep is called 1`] = `
 <FormTwo
   alert=""
+  formData={
+    Object {
+      "age": "",
+      "name": "",
+      "sex": "",
+    }
+  }
   nextStep={[Function]}
+  onChange={[Function]}
   prevStep={[Function]}
-  selectedOption=""
   setAlertFn={[Function]}
-  setSelectedOption={[Function]}
 />
 `;
